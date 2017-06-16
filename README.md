@@ -1,7 +1,6 @@
-Symfony Standard Edition
+Design Patterns in PHP
 ========================
 
-www.adrianwii.pl/designPattern/web
 
 What's inside?
 --------------
