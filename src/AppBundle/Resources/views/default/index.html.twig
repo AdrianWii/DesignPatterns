@@ -1,0 +1,38 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="status">
+                <p>
+                <h1><span>DESIGN PATTERNS IN PHP</span></h1>
+                </p>
+            </div>
+
+            <div id="next">
+                <p>
+                    {% if text is defined %}
+                    {{ text }}
+                    {% endif %}
+                </p>
+                <hr>
+                <h2>CREATIONAL PATTERN</h2>
+                 {%
+                   set mainMenu=[
+                        {'path' : 'singleton_result', 'name' : 'singleton'},
+                        {'path' : 'factory_result', 'name' : 'factory'},
+                    ] 
+                    %}
+                        <div>
+                            <ul>
+                                {% for position in mainMenu %}
+                                    <li><a href="{{ path(position['path']) }}" class="btn btn-success">{{ position['name']|upper}}</a></li>
+                                        {% endfor %}
+
+                            </ul>
+                        </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

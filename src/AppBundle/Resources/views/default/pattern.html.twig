@@ -1,0 +1,38 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="status">
+                <p>
+                <h1><span>DESIGN PATTERNS IN PHP</span></h1>
+                </p>
+            </div>
+
+            <div id="next">
+                <h2>{{ pattern|upper }}</h2>
+                {% if text is defined %}
+                    {{ text }}
+                {% endif %}
+                <br>
+                {% if code is defined %}
+                    {{ dump(code) }}
+                {% endif %}
+                <p>
+                    {% if outputs is defined %}
+                        {% for output in outputs %}
+                        <ul>
+                            <li>{{ output }}</li>
+                        </ul>
+
+                    {% endfor %}
+                {% endif %}
+                </p>
+                <hr>
+
+            </div>
+
+                        <a href="{{ path('homepage') }}" class="btn btn-success" role="button">Back</a>
+        </div>
+    </div>
+{% endblock %}
