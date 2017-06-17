@@ -15,6 +15,8 @@
                     {{ text }}
                 {% endif %}
                 <br>
+                <img src="{{ asset('bundles/app/img/')~pattern|lower~'.png' }}" class="img-responsive" alt="{{ pattern|lower }}">
+                <br>
                 {% if code is defined %}
                     {{ dump(code) }}
                 {% endif %}
